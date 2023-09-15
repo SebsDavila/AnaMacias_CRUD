@@ -1,0 +1,39 @@
+<div class="container-fluid my-3" style="text-align: -webkit-center;">
+  <h4 class="mb-3">Editar Empleado</h4>
+  <form #form="ngForm">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input id="id" name="id" type="text" class="form-control readonly-input" [(ngModel)]="employeeDetails.id">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required="required" class="form-control" [(ngModel)] = "employeeDetails.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" class="form-control" required="required" [(ngModel)] = "employeeDetails.email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="text" class="form-control" required="required" [(ngModel)] = "employeeDetails.phone">
+    </div>
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input id="department" name="department" type="text" class="form-control" [(ngModel)] = "employeeDetails.department">
+    </div>
+<br>
+    <button pButton pRipple type="button" icon="pi pi-pencil" label="Editar"
+    class="p-button-rounded p-button-warning"
+   routerLink="employees" (click)="updateEmployee()"
+    ></button>
+    <button pButton pRipple type="button" icon="pi pi-times" label="Eliminar"
+    class="p-button-rounded p-button-danger"
+   routerLink="employees" (click)="deleteEmployee(employeeDetails.id)"
+    ></button>
+    <button pButton pRipple type="button" icon="pi pi-times" label="Cancelar"
+    class="p-button-rounded p-button-secondary"
+   routerLink="employees" (click)="backEmployee()"
+    ></button>
+  </form>
+</div>
+

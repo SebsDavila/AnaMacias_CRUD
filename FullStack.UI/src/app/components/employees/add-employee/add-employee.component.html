@@ -1,0 +1,26 @@
+<div class="container-fluid my-3">
+  <h1 class="mb-3">Add New Employee Form</h1>
+  <form #form="ngForm" (ngSubmit)="addEmployee()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required="required" class="form-control" [(ngModel)] = "addEmployeeRequest.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" class="form-control" required="required" [(ngModel)] = "addEmployeeRequest.email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="number" class="form-control" required="required" [(ngModel)] = "addEmployeeRequest.phone">
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input id="salary" name="salary" type="number" class="form-control" required="required" [(ngModel)] = "addEmployeeRequest.salary">
+    </div>
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input id="department" name="department" type="text" class="form-control" [(ngModel)] = "addEmployeeRequest.department">
+    </div>
+    <button name="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+.form-control {
+  max-width: 300px; /* Ajuste a largura conforme necessário */
+}
+
+
+  .readonly-input {
+    background-color: #DCDCDC	 ; /* Defina a cor cinza que desejar */
+    color: #666666; /* Defina a cor do texto */
+    cursor: not-allowed; /* Mude o cursor para indicar que o campo não é editável */
+  }
+
+  #deleteBtn {
+    margin-left: 0.35em;
+  }
+

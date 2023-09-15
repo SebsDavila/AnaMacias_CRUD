@@ -1,0 +1,32 @@
+
+<div class="container my-5">
+<h3>Empleados</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Departamento</th>
+      <th scope="col">Detalles</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let employee of employees"> <!-- tem que bater com o nome da variavel no component ts do employee-list-->
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.phone}}</td>
+    <td>{{employee.department}}</td>
+    <td><button pButton pRipple type="button" icon="pi pi-eye" label="Detalles"
+      class="p-button-rounded p-button-warning" [routerLink]="['/employees', 'edit', employee.id]"
+      ></button></td>
+
+   </tr>
+  </tbody>
+</table>
+<div *ngIf="!employees || employees.length <= 0" class="col-12 text-center">
+  <p>No hay empleados registrados.</p>
+</div>
+</div>

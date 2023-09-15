@@ -1,0 +1,33 @@
+<div class="container-fluid my-3">
+  <h1 class="mb-3">Edit Employee Form</h1>
+  <form #form="ngForm" (ngSubmit)="updateEmployee()">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input id="id" name="id" type="text" class="form-control readonly-input" [(ngModel)]="employeeDetails.id">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required="required" class="form-control" [(ngModel)] = "employeeDetails.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" class="form-control" required="required" [(ngModel)] = "employeeDetails.email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="number" class="form-control" required="required" [(ngModel)] = "employeeDetails.phone">
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input id="salary" name="salary" type="number" class="form-control" required="required" [(ngModel)] = "employeeDetails.salary">
+    </div>
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input id="department" name="department" type="text" class="form-control" [(ngModel)] = "employeeDetails.department">
+    </div>
+    <button name="submit" type="submit" class="btn btn-warning mt-3">Edit</button>
+    <button name="submit" id="deleteBtn" type="button" class="btn btn-danger mt-3" (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+
+  </form>
+</div>
+
